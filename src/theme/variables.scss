@@ -1,0 +1,72 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: '../assets/fonts/';
+@import "./assets/css/base";
+@import "./assets/css/icon";
+@import "./assets/css/app";
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+@import "ionic.theme.default";
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+@import "ionic.ionicons";
+// Fonts
+// --------------------------------------------------
+@import "roboto";
+@import "noto-sans";
+//Sass Variables
+
+$background-color:#f2f2f2;
+$tabs-background:#fff;
+$button-ios-border-radius:2.2rem;
+$button-md-border-radius:$button-ios-border-radius;
+$button-ios-height:4.4rem;
+$button-md-height:$button-ios-height;
+$button-ios-margin:0;
+$button-md-margin:$button-ios-margin;
+$button-ios-font-size:1.8rem;
+$button-md-font-size:$button-ios-font-size;
+$toolbar-background:color($colors, primary);
+$toolbar-ios-background:color($colors, primary);
+$toolbar-md-background:color($colors, primary);
+$text-color:color($colors, dark);
+$tabs-ios-tab-text-color:#888;
+$tabs-md-tab-text-color:$tabs-ios-tab-text-color;
+$action-sheet-ios-button-min-height:auto;
+$list-border-color:$border-color;
+$tabs-ios-tab-icon-size:2.4rem;
+$label-md-text-color:color($colors, dark);
+
+
+
+
+
+
