@@ -11,7 +11,7 @@ ion-toast.danger .toast-wrapper {
 }
 //full-button
 ion-buttons.buttons-group {
-	border-top: 1px solid $border-color;
+	border-top: 1px solid color($colors, border);
 	margin: 0 0 1rem;
 }
 .button.full-button {
@@ -39,7 +39,7 @@ ion-buttons.buttons-group {
 		background-color: #fff;
 		color: color($colors, dark);
 		border: 0;
-		border-bottom: 1px solid $border-color;
+		border-bottom: 1px solid color($colors, border);
 	}
 }
 .buttons-list.list {

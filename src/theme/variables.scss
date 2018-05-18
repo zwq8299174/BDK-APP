@@ -13,14 +13,14 @@ $font-path: '../assets/fonts/';
 $app-direction: ltr;
 // Shared Variables
 
+@import "roboto";
+@import "noto-sans";
 @import "ionic.ionicons";
 // Fonts
 // --------------------------------------------------
-@import "roboto";
-@import "noto-sans";
 //Sass Variables
 
-$background-color:#f2f2f2;
+$background-color:color($colors, bg);
 $tabs-background:#fff;
 $button-ios-border-radius:2.2rem;
 $button-md-border-radius:$button-ios-border-radius;
@@ -37,6 +37,10 @@ $text-color:color($colors, dark);
 $tabs-ios-tab-text-color:#888;
 $tabs-md-tab-text-color:$tabs-ios-tab-text-color;
 $action-sheet-ios-button-min-height:auto;
-$list-border-color:$border-color;
+$list-border-color:color($colors, border);
 $tabs-ios-tab-icon-size:2.4rem;
 $label-md-text-color:color($colors, dark);
+
+
+
+$text-input-placeholder-color:		color($colors, gray);
