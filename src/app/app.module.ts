@@ -11,7 +11,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/mine/about/about';
-import { LoginModule } from '../pages/login/login.module';
+import { LoginPage } from '../pages/login/login';
 
 //Ionic原生相关
 import { StatusBar } from '@ionic-native/status-bar';
@@ -70,7 +70,8 @@ export class FunDebugErrorHandler implements ErrorHandler {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +81,6 @@ export class FunDebugErrorHandler implements ErrorHandler {
       backButtonText: ''
     }),
     IonicStorageModule.forRoot(),
-    LoginModule,
     CalendarModule
   ],
   bootstrap: [IonicApp],
@@ -89,7 +89,8 @@ export class FunDebugErrorHandler implements ErrorHandler {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
