@@ -25,6 +25,60 @@ $designWidth : 750; //如设计图是750
 	@return $px/20 + rem;
 }
 
+@mixin text-overflow($size:2){
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $size;
+	-webkit-box-orient: vertical;
+}
+
+@mixin tag($color,$out-line:false){
+	display: inline-block;
+	text-align: center;
+	width: rem(90);
+	height: rem(32);
+	position:relative;
+	border-radius:rem(16);
+		em{
+			display:inline-block;
+			width:rem(15);
+			height: rem(15);
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		i{
+			position: absolute;
+			width: 100%;
+			height:100%;
+			left:0;
+			top:0;
+			z-index:9;
+			font-size: $font-size-base;
+			line-height: rem(32);
+		}
+	@if($out-line){
+		color:$color;
+		border:1px solid $color;
+		em{
+			left:-1px;
+			top:-1px;
+			border-left:1px solid $color;
+			border-top:1px solid $color;
+			background-color: #f6f6f6;
+		}
+		i{line-height: rem(30);}
+	}
+	@else{
+		color:#fff;
+		background-color: $color;
+		em{
+			background-color: $color;
+		}
+	}
+}
+
 .transition-02 {transition: all 0.2s ease;
 }
 .transition-05 {

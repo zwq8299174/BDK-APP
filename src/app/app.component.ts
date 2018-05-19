@@ -3,8 +3,8 @@ import { Component, ViewChild } from '@angular/core';
 import { Events, IonicApp, Keyboard, ModalController, Nav, Platform, ToastController } from 'ionic-angular';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { LoginPage } from '../pages/login/login';
-import { AboutPage } from '../pages/mine/about/about';
+import { LoginPage } from '../pages/login/login/login';
+// import { AboutPage } from '../pages/mine/about/about';
 
 import { UserInfo } from '../model/user-info';
 
@@ -15,6 +15,9 @@ import { GlobalData } from '../providers/global-data';
 import { Utils } from '../providers/utils';
 import { CommonService } from '../service/common-service';
 import { VersionService } from '../providers/version-service';
+
+
+import { RemindPage } from '../pages/remind/remind/remind';
 
 @Component({
   templateUrl: 'app.html'
@@ -35,7 +38,7 @@ export class MyApp {
     private versionService: VersionService,
     private nativeService: NativeService) {
     platform.ready().then(() => {
-      this.nav.setRoot(LoginPage); // 设置首页
+      this.nav.setRoot(RemindPage); // 设置首页
       // this.nativeService.statusBarStyle(); // 设置状态栏颜色
       // this.assertNetwork(); // 检测网络
       // this.helper.funDebugInit(); // 初始化fundebug
@@ -129,7 +132,7 @@ export class MyApp {
           const t = childNav.getSelected(); // 获取选中的tab
           const v = t.getActive(); // 通过当前选中的tab获取ViewController
           const n = v.getNav(); // 通过当前视图的ViewController获取的NavController
-          n.push(AboutPage); // 跳转到指定页面
+          // n.push(AboutPage); // 跳转到指定页面
         });
       }
     });

@@ -11,7 +11,9 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/mine/about/about';
-import { LoginPage } from '../pages/login/login';
+
+import { LoginModule } from '../pages/login/login.module';
+import { RemindModule } from '../pages/remind/remind.module';
 
 //Ionic原生相关
 import { StatusBar } from '@ionic-native/status-bar';
@@ -58,81 +60,81 @@ fundebug.releasestage = IS_DEBUG ? 'development' : 'production'; // 应用开发
 fundebug.silent = !IS_DEBUG; // 如果暂时不需要使用Fundebug，将silent属性设为true
 
 export class FunDebugErrorHandler implements ErrorHandler {
-  handleError(err: any): void {
-    fundebug.notifyError(err);
-    console.error(err);
-  }
+	handleError(err: any): void {
+		fundebug.notifyError(err);
+		console.error(err);
+	}
 }
 
 @NgModule({
-  declarations: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage,
-    LoginPage
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    IonicModule.forRoot(MyApp, {
-      mode: 'ios', // android是'md'
-      backButtonText: ''
-    }),
-    IonicStorageModule.forRoot(),
-    CalendarModule
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage,
-    LoginPage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    AppVersion,
-    Camera,
-    Toast,
-    File,
-    FileTransfer,
-    FileOpener,
-    InAppBrowser,
-    ImagePicker,
-    Network,
-    AppMinimize,
-    Diagnostic,
-    HTTP,
-    JPush,
-    CodePush,
-    CallNumber,
-    BarcodeScanner,
-    { provide: ErrorHandler, useClass: FunDebugErrorHandler },
-    NativeService,
-    HttpService,
-    FileService,
-    Helper,
-    Utils,
-    GlobalData,
-    Logger,
-    CommonService,
-    VersionService,
-    Validators
-  ]
+	declarations: [
+		MyApp,
+		AboutPage,
+		ContactPage,
+		HomePage,
+		TabsPage
+	],
+	imports: [
+		LoginModule,
+		RemindModule,
+		BrowserModule,
+		HttpModule,
+		IonicModule.forRoot(MyApp, {
+			mode: 'ios', // android是'md'
+			backButtonText: ''
+		}),
+		IonicStorageModule.forRoot(),
+		CalendarModule
+	],
+	bootstrap: [IonicApp],
+	entryComponents: [
+		MyApp,
+		AboutPage,
+		ContactPage,
+		HomePage,
+		TabsPage
+	],
+	providers: [
+		StatusBar,
+		SplashScreen,
+		AppVersion,
+		Camera,
+		Toast,
+		File,
+		FileTransfer,
+		FileOpener,
+		InAppBrowser,
+		ImagePicker,
+		Network,
+		AppMinimize,
+		Diagnostic,
+		HTTP,
+		JPush,
+		CodePush,
+		CallNumber,
+		BarcodeScanner,
+		{ provide: ErrorHandler, useClass: FunDebugErrorHandler },
+		NativeService,
+		HttpService,
+		FileService,
+		Helper,
+		Utils,
+		GlobalData,
+		Logger,
+		CommonService,
+		VersionService,
+		Validators
+	]
 })
 export class AppModule {
-  constructor(public config: Config) {
-    this.setCustomTransitions();
-  }
+	constructor(public config: Config) {
+		this.setCustomTransitions();
+	}
 
-  private setCustomTransitions() {
-    this.config.setTransition('modal-from-right-enter', ModalFromRightEnter);
-    this.config.setTransition('modal-from-right-leave', ModalFromRightLeave);
-    this.config.setTransition('modal-scale-enter', ModalScaleEnter);
-    this.config.setTransition('modal-scale-leave', ModalScaleLeave);
-  }
+	private setCustomTransitions() {
+		this.config.setTransition('modal-from-right-enter', ModalFromRightEnter);
+		this.config.setTransition('modal-from-right-leave', ModalFromRightLeave);
+		this.config.setTransition('modal-scale-enter', ModalScaleEnter);
+		this.config.setTransition('modal-scale-leave', ModalScaleLeave);
+	}
 }

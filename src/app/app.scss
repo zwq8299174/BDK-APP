@@ -23,6 +23,9 @@ html {
   padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
 }
 
+
+
+
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 
 body,
@@ -169,4 +172,23 @@ var {
 ol,
 ul {
   list-style: none;
+}
+
+input[type=tel],
+input[type=number],
+input[type=password],
+input[type=date] {
+  font-family: tahoma, arial, "Hiragino Sans GB", \5b8b\4f53, sans-serif;
+}
+
+body {
+	margin: 0 auto;
+	overflow-x: hidden;
+	width: 375px;
+	min-height: 100%;
+	left:50%;
+	margin-left: -187.5px;
+}
+.app-root .ion-page.show-page ~ .nav-decor{
+	background-color: color($colors,bg);
 }
