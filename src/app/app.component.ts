@@ -18,6 +18,7 @@ import { VersionService } from '../providers/version-service';
 
 
 import { RemindPage } from '../pages/remind/remind/remind';
+import { NewRemindPage } from '../pages/remind/new-remind/new-remind';
 
 @Component({
   templateUrl: 'app.html'
@@ -39,7 +40,7 @@ export class MyApp {
     private nativeService: NativeService) {
     platform.ready().then(() => {
       // this.nav.setRoot(TabsPage); // 设置首页
-      this.nav.setRoot(RemindPage); // 设置首页
+      this.nav.setRoot(NewRemindPage); // 设置首页
       // this.nativeService.statusBarStyle(); // 设置状态栏颜色
       // this.assertNetwork(); // 检测网络
       // this.helper.funDebugInit(); // 初始化fundebug

@@ -20,11 +20,19 @@ $colors: (
 	bg: 		#fafafa
 );
 $border:		1px solid color($colors,border);
+
 $padding-horizontal:	rem(30);
 $designWidth : 750; //如设计图是750
 @function rem( $px ){
 	@return $px/20 + rem;
 }
+
+@mixin flex-center(){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 
 @mixin text-overflow($size:2){
 	overflow : hidden;

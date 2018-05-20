@@ -98,14 +98,19 @@ page-remind {
 		}
 	}
 	.bottom-bar{width: 100%;display: flex;height:rem(100);border-top:$border;justify-content:space-between;padding:rem(10) 0;
-		div{width: 50%;display: flex;justify-content:center;align-items:center; font-size: rem(36);
-			.iconfont{font-size:3.6rem;}
+		div{width: 50%;@include flex-center();  font-size: rem(36);
+			.iconfont{font-size:3rem;margin-right: 1rem;}
 		}
 		.delete{color:color($colors,danger);border-right: $border;}
 		.check-all{
 			.iconfont{
-				display: flex;width: rem(42);height: rem(42);justify-content: center;align-items: center;border-radius: 50%;
-				border: $border;
+				width: rem(44);height: rem(44);border-radius: 50%;@include flex-center();
+				border: 2px solid color($colors,icon);font-size: 1.8rem;color:color($colors,icon);@extend .transition-02;
+			}
+			&.active{
+				.iconfont{
+					background-color: color($colors,warning);border-color:color($colors,warning);color:#fff;
+				}
 			}
 		}
 	}
