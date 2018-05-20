@@ -27,7 +27,7 @@
 			</div>
 		</div>
 		<ion-list>
-			<ion-item-sliding #item>
+			<ion-item-sliding>
 				<ion-item>
 					<em class="top-line"></em>
 					<h3>
@@ -101,6 +101,100 @@
 			        </button>
 				</ion-item-options>
 			</ion-item-sliding>
+			<ion-item-sliding>
+				<ion-item>
+					<em class="top-line"></em>
+					<div class="remind-content">
+						<h3>
+							<span class="time">
+								<em></em>
+								<i>11:20</i>
+							</span>
+							<span class="title">客户报价</span>
+						</h3>
+						<p class="clientele-info">
+							<span class="name">李经理</span>
+							<span>大府信息技术科技有限公司</span>
+						</p>
+						<p class="remark">
+							跟进一下选号是否选好了，如果选好了就需要报价了。
+						</p>
+						<i class="iconfont mark">
+							&#xe640;
+						</i>
+					</div>
+					<div class="return-wrapper">
+						<p class="return">
+							<span class="return-from">
+								<em></em>
+								<i>丁伟</i>
+							</span>
+							<span class="return-text">具体预算多少钱呢？</span>
+						</p>
+					</div>
+				</ion-item>
+				<ion-item-options side="right" class="item-options">
+					<button class="delay" ion-button (click)="delay(item)">
+			          <span>延时</span>
+					  <span>设置</span>
+			        </button>
+					<button ion-button color="danger" (click)="delete(item)">
+			          删除
+			        </button>
+				</ion-item-options>
+			</ion-item-sliding>
+			<ion-item-sliding>
+				<ion-item class="pitch-on">
+					<em class="top-line"></em>
+					<div class="remind-content">
+						<h3>
+							<span class="time">
+								<em></em>
+								<i>11:20</i>
+							</span>
+							<span class="title">客户报价</span>
+						</h3>
+						<p class="clientele-info">
+							<span class="name">李经理</span>
+							<span>大府信息技术科技有限公司</span>
+						</p>
+						<p class="remark">
+							跟进一下选号是否选好了，如果选好了就需要报价了。
+						</p>
+						<i class="iconfont mark">
+							&#xe640;
+						</i>
+					</div>
+					<div class="return-wrapper">
+						<p class="return">
+							<span class="return-from">
+								<em></em>
+								<i>丁伟</i>
+							</span>
+							<span class="return-text">具体预算多少钱呢？</span>
+						</p>
+					</div>
+				</ion-item>
+				<ion-item-options side="right" class="item-options">
+					<button class="delay" ion-button (click)="delay(item)">
+			          <span>延时</span>
+					  <span>设置</span>
+			        </button>
+					<button ion-button color="danger" (click)="delete(item)">
+			          删除
+			        </button>
+				</ion-item-options>
+			</ion-item-sliding>
 		</ion-list>
+	</div>
+	<div class="bottom-bar">
+		<div class="delete">
+			<i class="iconfont">&#xe66e;</i>
+			<span>删除</span>
+		</div>
+		<div class="check-all">
+			<i class="iconfont">&#xe640;</i>
+			<span>全选</span>
+		</div>
 	</div>
 </ion-content>

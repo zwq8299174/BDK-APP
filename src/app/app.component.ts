@@ -38,6 +38,7 @@ export class MyApp {
     private versionService: VersionService,
     private nativeService: NativeService) {
     platform.ready().then(() => {
+      // this.nav.setRoot(TabsPage); // 设置首页
       this.nav.setRoot(RemindPage); // 设置首页
       // this.nativeService.statusBarStyle(); // 设置状态栏颜色
       // this.assertNetwork(); // 检测网络
