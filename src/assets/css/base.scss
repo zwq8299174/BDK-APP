@@ -1,8 +1,5 @@
 @import "ionic.globals";
 
-html {
-  font-size: 10px !important;
-}
 
 $colors: (
 	primary: 	#3dcbbd,
@@ -88,8 +85,9 @@ $designWidth : 750; //如设计图是750
 	}
 }
 
-.transition-02 {transition: all 0.2s ease;
-}
+.transition-02 {transition: all 0.2s ease;}
+.transition-35 {transition: all 0.35s ease;}
+
 .transition-05 {
 	transition: all 0.5s ease;
 }
